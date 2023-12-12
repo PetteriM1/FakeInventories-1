@@ -17,7 +17,7 @@ public class DoubleFakeBlock extends SingleFakeBlock {
     @Override
     public List<Vector3> getPositions(Player player) {
         Vector3 blockPosition = player.getPosition().add(this.getOffset(player)).floor();
-        if (blockPosition.getFloorY() >= 0 && blockPosition.getFloorY() < 256) {
+        if (blockPosition.getFloorY() >= player.getLevel().getMinBlockY() && blockPosition.getFloorY() <= player.getLevel().getMaxBlockY()) {
             if ((blockPosition.getFloorX() & 1) == 1)
                 return Arrays.asList(blockPosition, blockPosition.east());
 

@@ -14,7 +14,7 @@ public abstract class FakeBlock {
 
     public List<Vector3> getPositions(Player player) {
         Vector3 blockPosition = player.getPosition().add(this.getOffset(player)).floor();
-        if (blockPosition.getFloorY() >= 0 && blockPosition.getFloorY() < 256)
+        if (blockPosition.getFloorY() >= player.getLevel().getMinBlockY() && blockPosition.getFloorY() <= player.getLevel().getMaxBlockY())
             return Collections.singletonList(blockPosition);
 
         return Collections.emptyList();

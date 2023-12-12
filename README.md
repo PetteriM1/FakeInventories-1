@@ -1,9 +1,9 @@
-# FakeInventories [![](https://jitpack.io/v/IWareQ/FakeInventories.svg)](https://jitpack.io/#IWareQ/FakeInventories)
+# FakeInventories
 
-FakeInventories is a simple library plugin for PowerNukkit/Nukkit Minecraft Bedrock core, that will help you to create
+FakeInventories is a simple library plugin that will help you to create
 your custom virtual inventories with ease.
 
-##### [Download](https://github.com/IWareQ/FakeInventories/releases)
+##### [Download](https://github.com/PetteriM1/FakeInventories-1/releases)
 
 ## Usage
 

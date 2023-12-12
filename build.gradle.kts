@@ -3,16 +3,19 @@ plugins {
 }
 
 group = "me.iwareq"
-version = "1.1.7"
+version = "1.1.7-PM1E"
 
 repositories {
     mavenCentral()
-    maven("https://repo.opencollab.dev/maven-releases")
-    maven("https://repo.opencollab.dev/maven-snapshots")
 }
 
 dependencies {
-    implementation("cn.nukkit:nukkit:1.0-SNAPSHOT")
+    implementation(files("lib/patched.jar"))
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 tasks.withType<JavaCompile> {
